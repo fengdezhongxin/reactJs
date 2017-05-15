@@ -1,0 +1,41 @@
+#Iscroll {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#Iscroll_content {
+    position: relative;
+    top: 0px;
+    z-index: 2;
+    background: #fff;
+}
+
+.pull_up {
+    height: 0px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    overflow: hidden;
+}
+
+.pull_up .up_animate {
+    width: 10px;
+    height: 10px;
+    border-radius: 100% 100%;
+    background-color: #ccc;
+    margin: 5px;
+}
+
+.pull_up .up_animate.active {
+    background-color: #aaa;
+}
+
+.down_load {
+    text-align: center;
+    height: 1.413333rem;
+    line-height: 1.413333rem;
+    background-color: #ebebeb;
+    padding-bottom: 120px;
+}

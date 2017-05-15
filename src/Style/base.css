@@ -1,0 +1,397 @@
+@CHARSET "UTF-8";
+
+/** 清除内外边距 **/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+
+/* structural elements 结构元素 */
+
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+
+/* list elements 列表元素 */
+
+pre,
+
+/* text formatting elements 文本格式元素 */
+
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+
+/* form elements 表单元素 */
+
+th,
+td
+/* table elements 表格元素 */
+
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+/**
+* @ 设置默认字体 *
+* @ 这里的\5b8b\4f53就是代表宋体
+* @注释乱码：强烈建议不要用中文注释。font-family:'宋体'
+* @常用中文字体解码
+新细明体 \65B0\7EC6\660E\4F53
+细明体 \7EC6\660E\4F53
+标楷体 \6807\6977\4F53
+黑体 \9ED1\4F53
+宋体 \5B8B\4F53
+新宋体 \65B0\5B8B\4F53
+仿宋 \4EFF\5B8B
+楷体 \6977\4F53
+仿宋_GB2312 \4EFF\5B8B_GB2312
+楷体_GB2312 \6977\4F53_GB2312
+微软正黑体 \5FAE\x8F6F\6B63\9ED1\4F53
+微软雅黑 \5FAE\8F6F\96C5\9ED1
+*/
+
+body {
+    -webkit-text-size-adjust: none;
+    /*如果文字＜12px无效*/
+    -webkit-touch-callout: none;
+    /*禁止用户在新窗口弹出页面*/
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    /* 禁止点击后出现背景，只用于iOS */
+}
+
+body,
+button,
+input,
+select,
+textarea
+/* for ie */
+
+{
+    font: 12px/1.5 Tahoma, Arial, \5FAE\8F6F\96C5\9ED1, \5b8b\4f53, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+address,
+cite,
+dfn,
+em,
+b,
+caption,
+code,
+strong,
+th,
+var,
+em,
+i {
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/* 将斜体扶正 */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: courier new, courier, monospace;
+}
+
+
+/* 统一等宽字体 */
+
+small {
+    font-size: 12px;
+}
+
+
+/* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+
+/** 重置列表元素 **/
+
+ul,
+ol,
+li,
+dl,
+dh {
+    list-style: none;
+}
+
+
+/** 重置文本格式元素 **/
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+
+/* 重置，减少对行高的影响 */
+
+sub {
+    vertical-align: text-bottom;
+}
+
+a:hover,
+a:active,
+input,
+:focus {
+    outline: none;
+}
+
+
+/** 重置表单元素 **/
+
+legend {
+    color: #000;
+}
+
+
+/* for ie6 */
+
+fieldset,
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+
+/* img 搭车：让链接里的 img 无边框 */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+}
+
+
+/* 使得表单元素在 ie 下能继承字体大小 */
+
+
+/* 注：optgroup 无法扶正 */
+
+
+/** 重置表格元素 **/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    word-break: break-all;
+}
+
+
+/* 重置 HTML5 元素 */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+mark {
+    background: #ff0;
+}
+
+
+/* 遮罩层。 */
+
+.mask {
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+
+/*改变文字选中默认背景颜色*/
+
+::selection {
+    background: #8DB040;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #8DB040;
+    color: #fff;
+}
+
+::-webkit-selection {
+    background: #8DB040;
+    color: #fff;
+}
+
+
+/* 隐藏 */
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/* 清除浮动 */
+
+.clear:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clear {
+    *zoom: 1;
+}
+
+
+/*行块*/
+
+.inlineBlock {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+
+/*重置盒子模型模式*/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /*font-family: 'Arial', '\5FAE\8F6F\96C5\9ED1';*/
+    font-family: 'PingFang-SC-Regular', 'Arial', '微软雅黑', '幼圆';
+}
+
+
+/*设置按钮得到光标属性显示为手型*/
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible
+}
+
+
+/*重置系统选择按钮*/
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+/*同一搜索按钮UI*/
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+
+/*重置火狐浏览器中按钮的文字垂直对齐问题*/
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.bkw {
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.ellip {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background: #e7e7e7;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    border: 3px solid transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5) inset;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    min-height: 20px;
+    background-clip: content-box;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
